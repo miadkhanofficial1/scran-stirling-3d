@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121417;
+  color: #F9FAFB;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121417;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2E37;
+  border-radius: 9999px;
+  border: 2px solid #121417;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F26A21;
+}
+
+/* Subway tile subtle background grid */
+.subway-tile-bg {
+  background-color: #121417;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 20px;
+}
+
+.subway-tile-texture {
+  background-image: 
+    linear-gradient(rgba(242, 106, 33, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(242, 106, 33, 0.03) 1px, transparent 1px);
+  background-size: 60px 30px;
+}
+
+/* Glassmorphic card classes */
+.glass-panel {
+  background: rgba(26, 29, 35, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-panel-warm {
+  background: rgba(30, 34, 40, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(242, 106, 33, 0.15);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
